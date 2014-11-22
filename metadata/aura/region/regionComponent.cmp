@@ -1,0 +1,4 @@
+<aura:component access="GLOBAL">
+    <aura:registerevent name="configure" type="auraextjs:configure" access="GLOBAL"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+</aura:component>

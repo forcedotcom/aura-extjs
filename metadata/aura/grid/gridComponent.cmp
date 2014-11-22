@@ -1,0 +1,5 @@
+<aura:component access="GLOBAL">
+	<auraextjs:region configure="{!c.configure}">
+        <div aura:id="grid"/>
+    </auraextjs:region>
+</aura:component>
