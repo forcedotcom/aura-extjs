@@ -15,7 +15,7 @@ Getting Started
 ===============
 Aura-ExtJS consists of a single Aura component called auraextjs:region. You simply add an instance of `<aurextjs:region configure="{!c.configure}"/>` and then write your ExtJS specific JavaScript inside of a standard aura client-side controller method.
 
-This repository contains a fully functioning sample application [regionDemoApp.app](https://github.com/forcedotcom/aura-ng/blob/master/metadata/aura/regionDemoApp/regionDemoAppApplication.app) and component [regionDemoComponent.cmp](https://github.com/forcedotcom/aura-ng/blob/master/metadata/aura/regionDemo/regionDemoComponent.cmp) that demonstrate a number of different uses of the region component.
+This repository contains a fully functioning sample application [demo.app](https://github.com/forcedotcom/aura-extjs/blob/master/metadata/aura/demo/demoApplication.app) and component [tree.cmp](https://github.com/forcedotcom/aura-extjs/tree/master/metadata/aura/tree) that demonstrate a usage of the region component.
 
 Here is a snippet taken directly from the samples:
 
@@ -29,4 +29,4 @@ Here is a snippet taken directly from the samples:
   </aurang:region>
 </aura:component>
 ```
-that demonstrates referencing Aura attributes from Angular *{{blah}}* expressions - including iterating using ng-repeat over a collection passed into the component via an Aura attribute. The automatically applied `add-aura-scope` directive takes care of publishing Aura attributes to the region's scope.
+
