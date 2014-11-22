@@ -7,9 +7,9 @@ Aura-ExtJS is a Force.com component library that provides integration between Au
 
 Installation into your Force.com org
 ====================================
-The library is available as an installable force.com namespaced managed package [here](https://login.salesforce.com/packaging/installPackage.apexp?p0=04to0000000JiGn). The code in this repository is for informational purposes only currently and is a direct copy of the package made by using the force.com command line interface. Your Salesforce.com organization will need to have the Enable Lightning Components preference enabled in Setup In order for you to be able to try out aurang:region in your own components.
+The library is available as an installable force.com namespaced managed package [here](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tj0000000IUI0). The code in this repository is for informational purposes only currently and is a direct copy of the package made by using the force.com command line interface. Your Salesforce.com organization will need to have the Enable Lightning Components preference enabled in Setup In order for you to be able to try out aurang:region in your own components.
 
-After successfully installing the package into your org, you can try out the included demo application at /aurang/regionDemoApp.app.
+After successfully installing the package into your org, you can try out the included demo application at /auraextjs/demo.app. The package also includes a prebuilt Lightning tab that you can add to your Mobile Tabs in setup to see this working in Salesforce1 Mobile.
 
 Getting Started
 ===============
@@ -19,14 +19,52 @@ This repository contains a fully functioning sample application [demo.app](https
 
 Here is a snippet taken directly from the samples:
 
+auraextjs:tree.cmp
 ```
 <aura:component access="GLOBAL">
-  <aura:attribute name="someAttribute" type="string" required="true"/>
-  <aura:attribute name="someOtherAttribute" type="string[]"/>
-  <aurang:region aura:id="inner">
-    This content came from aurang:demoComponent: {{v.someAttribute}}
-    <div data-ng-repeat="item in v.someOtherAttribute">{{item}}</div>
-  </aurang:region>
+    <aura:attribute name="title" type="String" required="true" access="GLOBAL"/>
+
+    <auraextjs:region configure="{!c.configure}">
+        <div aura:id="tree"/>
+    </auraextjs:region>
+
 </aura:component>
 ```
 
+auraextjs:tree.Controller.js
+```
+({
+	configure : function(component, event, helper) {
+        Ext.create('Ext.tree.Panel', {
+            renderTo: component.find("tree").getElement(),
+            title: component.get("v.title"),
+            width: 300,
+            height: 250,
+            root: {
+                text: 'Root',
+                expanded: true,
+                children: [
+                    {
+                        text: 'Child 1',
+                        leaf: true
+                    },
+                    {
+                        text: 'Child 2',
+                        leaf: true
+                    },
+                    {
+                        text: 'Child 3',
+                        expanded: true,
+                        children: [
+                            {
+                                text: 'Grandchild',
+                                leaf: true
+                            }
+                        ]
+                    }
+                ]
+            }
+        });
+	}
+})
+```
