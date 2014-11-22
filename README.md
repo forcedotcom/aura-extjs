@@ -5,6 +5,12 @@ Aura-ExtJS is a Force.com component library that provides integration between Au
 - automatic once and only once loading and initialization semantics for ExtJS library
 - easy to use configuration event that allows you to wire in your angular code after all initialization of both aura and angular has been negotiated for you
 
+Here are some of the things to look forward to:
+
+- generic fix for touch events misbehaving when Ext.js content included in Salesforce1 Mobile
+- multi-version support to allow a specific version of angular.JS to be specified at the region level
+- automatic surfacing of aura components as ext components for use within Ext.js config objects
+
 Installation into your Force.com org
 ====================================
 The library is available as an installable force.com namespaced managed package [here](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tj0000000IUI0). The code in this repository is for informational purposes only currently and is a direct copy of the package made by using the force.com command line interface. Your Salesforce.com organization will need to have the Enable Lightning Components preference enabled in Setup In order for you to be able to try out aurang:region in your own components.
