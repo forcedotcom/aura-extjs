@@ -3,7 +3,7 @@
         var ret = this.superAfterRender();
         
         if (component._extLoaded) {
-        	component.getEvent("configure").fire();
+        	helper.configure(component);
         }
 
         return ret;

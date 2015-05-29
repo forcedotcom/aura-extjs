@@ -5,7 +5,7 @@
                 // Defer Ext configurations until after the renderering lifecycle
                 component._extLoaded = true;
             } else {
-                component.getEvent("configure").fire();
+                helper.configure(component);
             }
         });
     }
