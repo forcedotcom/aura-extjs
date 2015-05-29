@@ -1,0 +1,8 @@
+<aura:component access="GLOBAL">
+    <aura:attribute name="title" type="String" required="true" access="GLOBAL"/>
+
+    <auraextjs:region configure="{!c.configure}">
+        <span aura:id="tree"/>
+    </auraextjs:region>
+
+</aura:component>

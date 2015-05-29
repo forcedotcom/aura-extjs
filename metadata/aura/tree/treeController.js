@@ -1,7 +1,9 @@
 ({
-	configure : function(component, event, helper) {
+	configure: function(component, event, helper) {
+        var tree = component.find("tree").getElement();
+        
         Ext.create('Ext.tree.Panel', {
-            renderTo: component.find("tree").getElement(),
+            renderTo: tree,
             title: component.get("v.title"),
             width: 300,
             height: 250,

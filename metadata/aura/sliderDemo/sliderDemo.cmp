@@ -1,0 +1,5 @@
+<aura:component access="GLOBAL">
+    <auraextjs:region configure="{!c.configure}">
+        <span aura:id="content"/>
+    </auraextjs:region>
+</aura:component>

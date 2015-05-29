@@ -1,0 +1,9 @@
+<aura:component access="GLOBAL">
+    <aura:attribute name="text" type="String" required="true" access="GLOBAL"/>
+    <aura:attribute name="message" type="String" required="true" access="GLOBAL"/>
+
+    <auraextjs:region configure="{!c.configure}">
+        <span aura:id="button"/>
+    </auraextjs:region>
+
+</aura:component>
