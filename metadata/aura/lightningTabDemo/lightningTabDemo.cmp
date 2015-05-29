@@ -1,4 +1,5 @@
 <aura:component implements="force:appHostable">
+    <auraextjs:sliderDemo />
 	<auraextjs:tree title="Demo tree inside of S1"/>
-    <auraextjs:grid/>
+    <auraextjs:grid />
 </aura:component>
