@@ -31,11 +31,16 @@
                                 return String(thumb.value) + '%';
                             } 
                         },
+
                         defaultType: 'slider',
+                        
                         items: [{
                             fieldLabel: 'Sound Effects',
                             value: 50,
-                            name: 'fx'
+                            name: 'fx',
+
+                            vertical: true,
+                            height: 200
                         },{
                             fieldLabel: 'Ambient Sounds',
                             value: 80,
@@ -45,6 +50,7 @@
                             value: 25,
                             name: 'iface'
                         }],
+
                         bbar: [{
                             text: 'Max All',
                             scope: this,
