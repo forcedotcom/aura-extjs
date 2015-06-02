@@ -8,5 +8,16 @@
                 helper.configure(component);
             }
         });
+    },
+    
+    handleEvent: function(component, event, helper) {        
+        //console.log("event: " + event.target.id + " " + event.type + " { x: " + event.pageX + ", y: " + event.pageY + " }");
+              
+        var extEvent = new Ext.event.Event(event);
+        
+       	Ext.event.publisher.Dom.instance.publish(event.type, event.target, extEvent);      
+        Ext.event.publisher.Gesture.instance.publish(event.type, event.target, extEvent);
+        
+        event.stopPropagation();
     }
 })

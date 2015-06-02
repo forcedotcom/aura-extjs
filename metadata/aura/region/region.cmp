@@ -1,7 +1,10 @@
-<aura:component access="GLOBAL">
+<aura:component access="GLOBAL"  implements="force:appHostable,flexipage:availableForAllPageTypes">
     <aura:registerevent name="configure" type="auraextjs:configure" access="GLOBAL"/>
     <ltng:require styles="/resource/auraextjs__extjs/build/packages/ext-theme-crisp/build/resources/ext-theme-crisp-all.css"
                   scripts="/resource/auraextjs__extjs/build/ext-all-debug.js, /resource/auraextjs__extjs/build/packages/ext-theme-crisp/build/ext-theme-crisp.js"
                   afterScriptsLoaded="{!c.afterScriptsLoaded}"/>
-    <span aura:id="content">{!v.body}</span>
+    <span aura:id="content" onclick="{!c.handleEvent}" onmousedown="{!c.handleEvent}" onmouseup="{!c.handleEvent}"
+          onmouseover="{!c.handleEvent}" onmouseout="{!c.handleEvent}"  
+          ontouchstart="{!c.handleEvent}" ontouchend="{!c.handleEvent}" ontouchmove="{!c.handleEvent}" 
+          ontouchenter="{!c.handleEvent}" ontouchleave="{!c.handleEvent}" ontouchcancel="{!c.handleEvent}">{!v.body}</span>
 </aura:component>

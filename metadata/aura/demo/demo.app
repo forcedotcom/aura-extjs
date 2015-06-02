@@ -4,7 +4,7 @@
     <auraextjs:button text="Button A" message="You clicked me"/>
     <auraextjs:button text="Button B" message="You clicked me"/>
         
-    <!--<auraextjs:tree title="Demo Tree A"/>
+    <auraextjs:tree title="Demo Tree A"/>
     <auraextjs:grid />
-    <auraextjs:tree title="Demo Tree B"/>--> 
+    <auraextjs:tree title="Demo Tree B"/>
 </aura:application>

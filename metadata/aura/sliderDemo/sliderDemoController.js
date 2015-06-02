@@ -1,7 +1,5 @@
 ({
 	configure: function(component, event, helper) {
-        var content = component.find("content").getElement();
-                
         if (!Ext.ClassManager.isCreated('KitchenSink.view.form.SliderField')) {
             Ext.define('KitchenSink.view.form.SliderField', {
                 extend: 'Ext.form.Panel',
